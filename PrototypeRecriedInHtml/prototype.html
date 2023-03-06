@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta data-n-head="true" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="max-age=60">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1, minimum-scale=1,maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="Description" content="Esse site é um modelo melhorado de um site de noticia da BBC">
+    <meta name="Keywords"
+        content="noticia; noticia atuais; noticia de ultima hora; melhores noticia; categoria de noticia; noticia sobre novas leis; noticia sobre">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"> <!-- decida -->
+    <meta property="og:title" content="Noticias mais atuais do mundo">
+    <meta name="author" content="Rafa">
+    <meta property="og:description" content="Noticia de agora:">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="cssprototipo.css">
+    <title>BBC - Site de noticias</title>
+    <style>
+
+    </style>
+</head>
+<!-- avisar o prof que precisa de javascript para os botões e conteudo main - podemos usar o seletores de elemento para afetar outro elemento apartir de um elemento como o backdrop-filter ou então o children -->
+<!-- podemos controlar eles pelo pai -->
+
+<body>
+    <!-- <nav class="menu1">
+        <div class="SetaR">SetaR</div>
+        <div class="SetaR">SetaR</div>
+        <div class="SetaR">SetaR</div>
+        <div class="navOpen">Navigation</div>
+        <div class="SetaR">SetaR</div>
+        <div class="SetaR">SetaR</div>
+        <div class="SetaR">SetaR</div>
+    </nav> --> <!-- menu - botão puxar -->
+    <nav class="menu2">
+        <!-- Sim, poderia ficar mais simples se eu colocasse apenas o link(a) enves do button, habito -->
+        <div class="buttons1">
+            <!-- <label for="busca" style="float: left;">busca:</label> -->
+            <input id="busca" type="text" placeholder="  Busca" />
+            <!-- <label for="inicio"></label> -->
+            <button id="inicio"><a href="">Início</a></button>
+            <!-- <label for="type">Tipo de noticia</label> -->
+            <button id="type"><a href="">Tipo de noticia</a></button>
+            <!-- <label for="MVis">busca:</label> -->
+            <button id="MVis"><a href="">Mais vistos</a></button>
+            <!-- <label for="Feedback">busca:</label> -->
+            <button id="Feedback">Feedback</button>
+        </div>
+        <div class="menu1-1">
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="navOpenAndClose">Navigation</div>
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="SetaL"><svg width="40" height="42" viewBox="0 0 40 42" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint0_radial_17_471)" />
+                    <path d="M39.5454 21.1723L0.1287 41.8277L0.229663 0.258606L39.5454 21.1723Z"
+                        fill="url(#paint1_radial_17_471)" fill-opacity="0.2" />
+                    <defs>
+                        <radialGradient id="paint0_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop stop-opacity="0" />
+                            <stop offset="1" stop-color="#E4FF79" />
+                        </radialGradient>
+                        <radialGradient id="paint1_radial_17_471" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(13.3013 21.0862) rotate(-179.812) scale(26.2443 24)">
+                            <stop offset="0.916667" stop-color="#FFB800" />
+                            <stop offset="1" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </nav> <!-- menu - opções -->
+    <!-- <nav class="menu3"></nav> --> <!-- menu - fechar - não precisou -->
+
+
+    <nav class="config1"> <!-- configurações - botão -->
+        <div class="config1 text-center" style="background: none; transform: translate(0, 7px);">
+            <svg width="30" height="30" viewBox="0 0 67 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.00146" y="1" width="64" height="5" rx="2.5" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="1.00146" y="24" width="64" height="5" rx="2.5" fill="white" stroke="black" stroke-width="2"/>
+            <rect x="1.00146" y="47" width="64" height="5" rx="2.5" fill="white" stroke="black" stroke-width="2"/>
+            </svg>
+        </div>
+        <nav class="config2">
+            <h1 class="text-center">Configurações</h1>
+            <div class="align-items-lg-center" style="display: flex; flex-direction: row; width: 100%;">
+                <h4 class="mt-4 m-lg-4">Themas: </h4>
+                <select class="align-items-lg-center" style="position: fixed; right: 0; margin-right: 10%;" name="select">
+                    <option value="valor1">Valor 1</option>
+                    <option value="valor2" selected>Valor 2</option>
+                    <option value="valor3">Valor 3</option>
+                  </select>
+            </div>
+            <div class="align-items-lg-center" style="display: flex; flex-direction: row; width: 100%;">
+                <h4 class="mt-4 m-lg-4">Volume: </h4>
+                <progress class="align-items-lg-center" style="position: fixed; right: 0; margin-right: 10%;" value="70" max="100"></progress>
+            </div>
+        </nav>
+        <div class="effect1"></div>
+    </nav> <!-- config - opçoes --> <!-- funcionou de uma forma inesperada e semelhante ao meu objetivo -->
+    <!-- <nav class="config3"></nav> --> <!-- config - fechar - noNecessary-->
+
+
+    <main> <!-- seções de noticias -->
+        <!-- vou mudar, fazer ela ir para baixo de +, deve ser mais interessante -->
+        <h1 class="texto_animado" style="font-size: 90px; margin-top: 30px; margin-bottom: 20px;">Noticias atuais</h1>
+        <section> <!-- noticias mais atuais -->
+            <div class="superior">
+                <div>
+                    <h1>Guerra na ucrania</h1>
+                </div>
+                <div><span>data: 05/03/2003 - local: CNN in Ucrânia</span></div>
+            </div>
+            <div class="mid">
+                <button><svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                    </button> <!-- os botoes só funfa com java script ou com uma tecnica muito estranha de link e #-->
+                <div class="iframe"><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZRepPZwzREo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <button class="right"><svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                    </button>
+            </div>
+            <div class="inferior">
+                <p>A guerra esta acontecendo e nois nem sente. Vamos abrir os olhos e ver os detalhes atraves do video, situação é triste, então assista apenas aqueles que tem forte resistencia a pessoas frias.</p>
+            </div>
+
+            <!-- bug -->
+<!--             <table>
+                <tr>
+                    <td>
+                        <h1>title:noticia</h1>
+                    </td>
+                    <td><span>data: Y/X/Z local: UWV</span></td>
+                    <td><span></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button>svg</button>
+                        <div class="video"><iframe width="560" height="315"
+                                src="https://www.youtube-nocookie.com/embed/f-pdILjHYsI" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe></div>
+                        <button>svg</button>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>descrição:</p>
+                    </td>
+                </tr>
+            </table> -->
+            <!-- <div><h1>title:noticia</h1><span>data:</span><span>local:</span></div> -->
+            <!-- <div>
+                <div></div>
+                <div>video</div>
+                <div></div>
+            </div> -->
+            <!-- <div>
+                <p>descrição:</p>
+            </div> --><!-- teste -->
+        </section>
+
+
+        <hr class="w-75 bg-dark-subtle border-2">
+        <h1 style="font-size: 90px; margin-top: 30px; margin-bottom: 20px;">Noticia interessantes</h1>
+        <section> <!-- noticias recentes -->
+            <div class="superior">
+                <div>
+                    <h1>Title</h1>
+                </div>
+                <div><span>data: - local: </span></div>
+            </div>
+            <div class="mid">
+                <button>
+                    <svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                </button> <!-- os botoes só funfa com java script ou com uma tecnica muito estranha de link e #-->
+
+                    <!-- VIDEO ou IFRAME ou IMAGEM -->
+                <div class="iframe">
+                    <svg width="500" height="500" viewBox="0 0 931 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="931" height="630" rx="40" fill="url(#paint0_diamond_3_224)"/>
+                    <rect width="931" height="630" rx="40" fill="url(#paint1_diamond_3_224)" fill-opacity="0.3"/>
+                    <defs>
+                    <radialGradient id="paint0_diamond_3_224" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(465.5 315) rotate(90) scale(315 465.5)">
+                    <stop offset="0.0001"/>
+                    <stop offset="0.0002" stop-color="#1C1C1C"/>
+                    <stop offset="1" stop-color="#46FFA6" stop-opacity="0"/>
+                    </radialGradient>
+                    <radialGradient id="paint1_diamond_3_224" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(465.5 315) rotate(90) scale(315 465.5)">
+                    <stop stop-opacity="0"/>
+                    <stop offset="0.572917" stop-color="#A8E0FF" stop-opacity="0.4"/>
+                    </radialGradient>
+                    </defs>
+                    </svg>
+                </div> 
+                    <!-- VIDEO ou IFRAME ou IMAGEM -->
+
+
+                <button class="right">
+                    <svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                </button>
+            </div>
+            <div class="inferior">
+                <p>Descrition</p>
+            </div>
+        </section>
+
+        <hr class="w-50 bg-dark-subtle border-2">
+        <h1 style="font-size: 90px; margin-top: 30px; margin-bottom: 20px;">Inovações na ciencia</h1>
+        <section> <!-- noticias inovadoras -->
+            <div class="superior">
+                <div>
+                    <h1>Title</h1>
+                </div>
+                <div><span>data: - local: </span></div>
+            </div>
+            <div class="mid">
+                <button>
+                    <svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                </button> <!-- os botoes só funfa com java script ou com uma tecnica muito estranha de link e #-->
+
+                    <!-- VIDEO ou IFRAME ou IMAGEM -->
+                <div class="iframe">
+                    <svg width="500" height="500" viewBox="0 0 931 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="931" height="630" rx="40" fill="url(#paint0_diamond_3_224)"/>
+                    <rect width="931" height="630" rx="40" fill="url(#paint1_diamond_3_224)" fill-opacity="0.3"/>
+                    <defs>
+                    <radialGradient id="paint0_diamond_3_224" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(465.5 315) rotate(90) scale(315 465.5)">
+                    <stop offset="0.0001"/>
+                    <stop offset="0.0002" stop-color="#1C1C1C"/>
+                    <stop offset="1" stop-color="#46FFA6" stop-opacity="0"/>
+                    </radialGradient>
+                    <radialGradient id="paint1_diamond_3_224" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(465.5 315) rotate(90) scale(315 465.5)">
+                    <stop stop-opacity="0"/>
+                    <stop offset="0.572917" stop-color="#A8E0FF" stop-opacity="0.4"/>
+                    </radialGradient>
+                    </defs>
+                    </svg>
+                </div> 
+                    <!-- VIDEO ou IFRAME ou IMAGEM -->
+
+
+                <button class="right">
+                    <svg width="129" height="140" viewBox="0 0 129 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint0_radial_3_305)" fill-opacity="0.5"/>
+                    <path d="M0.997843 73.1706L125.228 0.763517L128.689 139.284L0.997843 73.1706Z" fill="url(#paint1_linear_3_305)" fill-opacity="0.5"/>
+                    <defs>
+                    <radialGradient id="paint0_radial_3_305" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(84.9716 71.0728) rotate(-1.43103) scale(84 80)">
+                    <stop stop-color="#8B81FF"/>
+                    <stop offset="1" stop-color="#8B81FF" stop-opacity="0"/>
+                    </radialGradient>
+                    <linearGradient id="paint1_linear_3_305" x1="0.997843" y1="73.1706" x2="168.945" y2="68.975" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FF1111"/>
+                    <stop offset="1" stop-color="#11FFFF" stop-opacity="0"/>
+                    </linearGradient>
+                    </defs>
+                    </svg>                    
+                </button>
+            </div>
+            <div class="inferior">
+                <p>Descrition</p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer> <!-- © 2023 Rafox. Todos os direitos reservados para fins didaticos. É apenas um exemplo de site original --></footer>
+</body>
+
+</html>
+<!-- temos apenas um erro grave, a table não funcionou corretamente provavelmente por conta do display flex-->

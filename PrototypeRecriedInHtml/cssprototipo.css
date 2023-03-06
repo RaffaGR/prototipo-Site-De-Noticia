@@ -1,0 +1,334 @@
+/* corrections, desbug */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+
+body {
+    background: radial-gradient(50% 50% at 50% 50%, rgba(252, 255, 119, 0.046) 4.69%, rgba(0, 0, 0, 0.2) 93.23%), radial-gradient(50% 50% at 50% 50%, #969696 0%, #FFFFFF 0.01%, #7B7B7B 100%) no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+/* animation */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 55%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-right: .15em solid rgb(237, 236, 235);
+    }
+
+    50% {
+        border-right: .15em solid rgb(0, 0, 0);
+    }
+}
+
+.texto_animado {
+    overflow: hidden;
+    border-right: .15em solid rgb(237, 236, 235);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 2.5s steps(40, end),
+               blink-caret .75s step-end infinite;
+}
+
+/* extra */
+
+.superior>div {
+    display: flex;
+    justify-content: center;
+}
+
+#setaQuad {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 10px solid orange;
+    border-right: 10px solid black;
+    border-top: 10px solid black;
+    transform: rotate(45deg);
+}
+
+/* P3, main */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section>div:not(.superior) {
+    background: radial-gradient(50% 50% at 50% 50%, #000000 0.01%, #1C1C1C 0.02%, rgba(210, 210, 210, 0) 100%);
+    border-radius: 40px;
+}
+
+section>div {
+    width: 70vw;
+}
+
+/* estranhamente em % buga */
+
+.mid {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.right {
+    transform: rotate(180deg);
+    margin-left: 10px;
+    margin-right: -3px;
+}
+
+/* td {
+    display: flex; flex-direction: row; align-items: center; justify-content: center; align-content: center;
+} */
+
+section button {
+    width: 50%;
+    margin-right: 15px;
+    border-radius: 150px 50px 50px 150px;
+    background: none;
+    border: none;
+}
+
+/* svg */
+
+/* !!!NOTE, com > vc fala para usar o de cima para afetar o de baixo, sem a seta fala apenas para seleciona o de baixo ou localizar, mas o da seta serve de certa forma para isso tbm!!! */
+
+/* 
+td {
+    background-color: darkkhaki;
+    width: auto;
+    height: 50px;
+}
+
+td > div.video {
+    width: 560px;
+    height: 315px;
+} */
+/* bug */
+
+/* tr {
+    background-color: blue;
+    width: 100px;
+    height: 200px;
+} */
+/* se tornou o td... */
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: rgba(255, 255, 255, 0.070);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+/* P1, nav */
+/* P2, menu config */
+
+nav,
+.effect1 {
+    position: fixed;
+}
+
+.menu1 {
+    left: 0;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    background: linear-gradient(90deg, #7e70ff, #70ffe0);
+    z-index: 1;
+    /* opacity: 0.85; */
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 3s;
+    border-radius: 0% 30% 20% 0%;
+}
+
+.menu1-1 {
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #7e70ff00, #70ffe000);
+    z-index: 1;
+    /* opacity: 0.85; */
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 3s;
+    border-radius: 0% 30% 20% 0%;
+    width: 100%;
+}
+
+.menu1:hover {
+    opacity: 0%;
+    transform: translate(-5vw);
+    /* z-index: -1; */
+}
+
+.navOpenAndClose {
+    transform: translate(1.1vw, 0px) rotate(-90deg);
+    font-family: "Microsoft Modern No. 20", "Verdana", "Arial", "Helvetica", sans-serif !important;
+    font-size: 140%;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 1px 0px 5px #000000;
+    -webkit-text-stroke: 0.7px rgb(204, 204, 204);
+}
+
+.menu2 {
+    left: 0;
+    width: 22%;
+    height: 100vh;
+    background: linear-gradient(90deg, #7e70ff, #70ffe0);
+    opacity: 0.85;
+    border-radius: 0% 30% 20% 0%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    transform: translate(-13vw);
+    transition: 1s;
+}
+
+@media screen and (max-width: 1100px) {
+    .menu2 {
+        width: 30%;
+        transform: translate(-20vw);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu2 {
+        width: 55%;
+        transform: translate(-37vw);
+    }
+}
+
+.menu2:hover {
+    transform: translate(0vw);
+}
+
+
+
+.buttons1 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: space-around; */
+    /* align-self: flex-start; */
+}
+
+.buttons1>button,
+input,
+a {
+    width: 150px;
+    height: 30px;
+    margin: 10px 0px;
+    margin-left: 5%;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 20px;
+    transition: 0.15s;
+    text-decoration: none;
+}
+
+.buttons1>input {
+    background-color: rgb(255, 255, 255);
+}
+
+.buttons1>button:hover,
+input:hover {
+    background-color: rgba(249, 249, 249, 0.608);
+    color: black;
+}
+
+.buttons1>button:hover>a {
+    /* interessante kk */
+    color: black;
+}
+
+.config1 {
+    right: 0;
+    top: 0;
+    width: 7vw;
+    height: 7vh;
+    background: #ffd470;
+    border-radius: 0px 0px 0px 30px;
+    z-index: 1;
+}
+
+.config2 {
+    top: 20vh;
+    left: 20vw;
+    bottom: 0;
+    width: 70vw;
+    height: 70vh;
+    background: #ff7070;
+    opacity: 0;
+    transform: translate(0%, -140%);
+    transition: 1s;
+    border-radius: 30px;
+    z-index: 1;
+    box-shadow: inset 0 0 2em rgb(0, 0, 0), 0 0 1em red;
+}
+
+.config1:hover>.config2 {
+    transform: translate(0%, 0%);
+    opacity: 1;
+    bottom: 100%;
+}
+
+.effect1 {
+    top: 0;
+    background: #eaff70;
+    opacity: 0.4;
+    border-radius: 50%;
+    width: 100vw;
+    height: 20vh;
+    transform: translate(-95%, -110%);
+    transition: .5s;
+    box-shadow: inset 0 0 2em rgb(255, 255, 255), 0 0 1em rgb(239, 255, 150);
+}
+
+.config1:hover>.effect1 {
+    transform: translate(-95%, -60%);
+}
+
+/* depende de script(JS) ou fica desse jeito...*/
